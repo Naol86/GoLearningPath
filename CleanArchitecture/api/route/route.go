@@ -14,4 +14,5 @@ func Setup(env *config.Env, timeout time.Duration, db mongo.Database, gin *gin.E
 	publicRoute := gin.Group("")
 	// public routes
 	NewSignupRoute(env, timeout, db, publicRoute);
+	NewLoginRoute(env, timeout, db, publicRoute);
 }

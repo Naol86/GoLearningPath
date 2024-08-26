@@ -17,6 +17,12 @@ type User struct {
 	Password string             `bson:"password"`
 }
 
+type UserResponse struct {
+	ID    string `json:"id"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
+}
+
 type UserRepository interface {
 	Create(c context.Context,user *User) error
 	Fetch(c context.Context) ([]User, error)
